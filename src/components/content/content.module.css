@@ -1,0 +1,14 @@
+span.black {
+    color:black;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+span.pink {
+    color:#F3477A;
+    font-size: 36px;
+    font-weight: 700;
+}
+.contentTitle {
+    margin-bottom: 40px;
+}

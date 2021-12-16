@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+* {
+  font-family:Montserrat;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width:1250px;
+  margin:0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.header {
+  height:100px;
+  margin-bottom: 110px;
+  margin-top:50px;
+  width:100%;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  width:1375px;
+  margin:20px auto;
+  display: flex;
+  flex-wrap:wrap;
+  background-color: white;
+  border-radius:30px;
+}
+.content {
+  margin-bottom: 200px;
+  width:70%;
+}
+#root {
+  background:linear-gradient(#EDC1D3, #91BDEC);
+  display:flex;
+  align-items:center;
+}
+.addTask {
+font-size: 12px;
+color:white;
+padding: 10px 30px;
+background-color: #884CB2;
+border-radius:10px;
+margin-left:30px;
+border:none;
+}
+.holdedTasksList {
+  margin-bottom: 30px;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  border-bottom:1px solid #E0E0E0;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+}
+.taskText {
+  width:50%;
+  font-size: 14px;
+}
+.onHold,
+.completedTasks {
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.completedTasksList > .task {
+  opacity: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.importance {
+  font-size: 12px;
+  font-weight: 400;
+}
+.deleteTrigger {
+  background-color:#efefef;
+  border-radius:50px;
+  padding: 5px 10px;
+}
+.sidebar {
+  width:20%;
+}
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calendar > div {
+  width:40px;
 }
