@@ -1,14 +1,19 @@
 import Calendar from 'react-calendar';
+import React from 'react'
+import { useDispatch } from 'react-redux';
+import { setCurrentDay } from '../../redux/reducers/rootReducer';
+import MyCalendar from '../myCalendar/myCalendar';
 
 
 
 const Sidebar = () => {
+    const dispatch = useDispatch()
+    const active = [];
+    const disactive = []
     return (
-        <div className='sidebar'>
-            <Calendar
-            onChange={(value) => console.log(value.getDate())}
-            tileClassName={'testtt'}
-            />
+        <div>
+           
+            <MyCalendar/>
         </div>
     )
 }

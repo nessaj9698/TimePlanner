@@ -1,30 +1,41 @@
-
+import React from 'react';
+import { fetch,deleteTask } from '../../../../../firebase';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 
 const CompletedTasks = () => {
+    const dispatch = useDispatch()
+   
+    const currentUser = useSelector(state => state.rootReducer.userID)
+    const currentDay = useSelector(state => state.rootReducer.currentDay)
+   
+    useEffect(() => {
+        fetch(currentUser,currentDay,'completed',dispatch)
+     
+    }, [currentUser,currentDay])
+    const tasks = useSelector(state => state.rootReducer.completedEvents)
+    
+    let tasksRes = []
+    for (let task in tasks) {
+        tasksRes.push({taskID:task,taskText:tasks[task].task,taskImportance:tasks[task].importance})
+        
+    }
+ 
+    
     return (
         <div className='completedTasksList'>
             
             <div className='completedTasks'>
-                Выполненные задачи:
+                {tasks ? "Выполненные задачи" : ''}
             </div>
-            <div className='task'>
-                <span className='taskText'>Погулять с женой</span>
-                <span className='importance'>Важно</span>
-                <span className='deleteTrigger'>x</span>
-            </div>
-            <div className='task'>
-                <span className='taskText'>Проснуться</span>
-                <span className='importance'>Очень важно</span>
-                <span className='deleteTrigger'>x</span>
-            </div>
-            <div className='task'>
-                <span className='taskText'>Почистить зубы</span>
-                <span className='importance'>Маловажно</span>
-                <span className='deleteTrigger'>x</span>
-            </div>
-            
-       
+        {tasksRes.map((item) => <div className="task">
+            <span className='taskText'>{item.taskText}</span>
+            <span className='importance'>{item.taskImportance}</span>
+            <span className='deleteTrigger'
+                onClick={() => {deleteTask(currentUser,'completed',currentDay,item.taskID,dispatch)}}
+            >x</span>
+        </div>)}
         </div>
     )
 }

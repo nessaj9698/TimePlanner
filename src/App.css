@@ -7,12 +7,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-self:flex-start;
 }
 .header {
   height:100px;
-  margin-bottom: 110px;
+   margin-bottom: 50px;
   margin-top:50px;
   width:100%;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .App {
@@ -22,15 +26,30 @@
   flex-wrap:wrap;
   background-color: white;
   border-radius:30px;
+  min-height:96vh;
+}
+.flex {
+  display:flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
 }
 .content {
   margin-bottom: 200px;
-  width:70%;
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+ 
 }
+.todos {
+  max-width:75%;
+}
+
 #root {
   background:linear-gradient(#EDC1D3, #91BDEC);
   display:flex;
   align-items:center;
+  height:100%;
 }
 .addTask {
 font-size: 12px;
@@ -70,13 +89,17 @@ border:none;
   font-size: 12px;
   font-weight: 400;
 }
-.deleteTrigger {
+.deleteTrigger,
+.completeTrigger {
   background-color:#efefef;
   border-radius:50px;
   padding: 5px 10px;
 }
+.completeTrigger {
+  margin-right: 10px;
+}
 .sidebar {
-  width:20%;
+  width:25%;
 }
 
 .calendar {
@@ -85,4 +108,107 @@ border:none;
 }
 .calendar > div {
   width:40px;
+}
+#firebaseui_container {
+  width:360px;
+}
+.logout-button {
+border-radius:8px;
+border:none;
+padding:5px 15px;
+background-color:#F3477A;
+margin-left:20px;
+color:white;
+cursor: pointer;
+}
+.importances {
+  display:block !important;
+  margin-bottom:10px !important;
+  padding-top:5px !important;
+}
+.radio-unchecked {
+  display:none;
+}
+.today {
+  justify-content: flex-start;
+}
+.weatherItem {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
+  width:75px;
+  position:relative;
+  margin-top:-35px;
+}
+.weatherItem > * {
+  width:100%;
+  text-align:center;
+ 
+}
+.weatherTime {
+  position:absolute;
+  top:-5px;
+  left:0;
+}
+.weatherTemperature {
+  height: 7px;
+  margin-top: -25px;
+}
+.svg {
+  width:300px;
+}
+.svg-wrapper {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+}
+.svg-wrapper > p {
+  width:100%;
+  text-align:center;
+  margin-top: -30px;
+}
+
+@media (max-device-width:768px) {
+  .App {
+    width:95%;
+  }
+  .container {
+    width:95%;
+  }
+  .todos {
+    max-width:100%;
+    width:100%;
+    order:2;
+  }
+  .today-date {
+    display:none;
+  }
+  .sidebar {
+    width:100%;
+    order:1;
+    margin-bottom: 75px;
+  }
+  .today {
+    justify-content: center;
+  }
+  .content-title {
+    text-align:center;
+    margin-top: -25px;
+  }
+  .add-task-wrapper {
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .addTask {
+    margin:0;
+  }
+  input[type="text"] {
+    max-width:95%;
+  }
+  .weatherItem {
+    margin-bottom:70px;
+  }
 }

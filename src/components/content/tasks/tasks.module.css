@@ -1,0 +1,44 @@
+.add {
+    padding: 10px 25px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #39e381;
+    color: white;
+}
+
+.remove {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #F3477A;
+    color: white;
+}
+
+.taskInput {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 25px;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.formWarning {
+    position: relative;
+    padding-left: 20px;
+}
+
+.formWarning:before {
+    content: '*';
+    color:red;
+    border-radius: 20px;
+    position: absolute;
+    left: 5px;
+    top:-2px;
+    font-size: 25px;
+}

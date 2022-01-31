@@ -12,3 +12,11 @@ span.pink {
 .contentTitle {
     margin-bottom: 40px;
 }
+.login {
+    height:650px;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    width:100%;
+}
+
