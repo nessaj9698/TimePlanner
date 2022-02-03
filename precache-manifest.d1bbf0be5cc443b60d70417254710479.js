@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ef4516e16ec7ac5503cf4ac036b25d6d",
+    "revision": "fa5c7d07a83775f80364a0aa09f2285f",
     "url": "/TimePlanner/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/TimePlanner/static/css/2.e3a89a79.chunk.css"
   },
   {
-    "revision": "977efd9f8359af4d7723",
-    "url": "/TimePlanner/static/css/main.0ad9a076.chunk.css"
+    "revision": "0f2344e0be18956d3f4b",
+    "url": "/TimePlanner/static/css/main.6c9cc417.chunk.css"
   },
   {
     "revision": "26f2e6ba06cd157e8e98",
@@ -24,7 +24,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/TimePlanner/static/js/3.4235dc93.chunk.js"
   },
   {
-    "revision": "977efd9f8359af4d7723",
+    "revision": "0f2344e0be18956d3f4b",
     "url": "/TimePlanner/static/js/main.aaf6d25d.chunk.js"
   },
   {
