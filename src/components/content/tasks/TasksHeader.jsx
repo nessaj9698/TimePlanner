@@ -8,14 +8,13 @@ import getForecast from '../../../api/location-api'
 
 const TasksHeader = () => {
     const dispatch = useDispatch()
-
-    const [addTask, addTaskActive] = useState(false)
+    const [isAddTaskActive, addTaskActive] = useState(false)
     const [taskCount, setTaskCount] = useState(0)
     const today = useSelector(state => state.rootReducer.currentDay)
     const events = useSelector(state => state.rootReducer.plannedEvents)
     const forecast = useSelector(state => state.rootReducer.forecast)
-    
     let tasks = []
+
     useEffect(() => {
         getForecast(dispatch)
     }, [])
@@ -29,36 +28,31 @@ const TasksHeader = () => {
         setTaskCount(count.length)
     }, [events])
 
-
-    
     return (
         <div className={s.contentTitle}>
             <div className='today flex'>
-                <span style={{marginRight:'20px'}} className='today-date'>{today}</span>
+                <span style={{ marginRight: '20px' }} className='today-date'>{today}</span>
                 <div className='weather flex'>
                     {forecast.map(item =>
-                        item.date.fullDate == today ? 
-                        <div className='weatherItem'>
-                            <div className='weatherTime'>{item.date.time}</div>
-                            <img src={`http://openweathermap.org/img/wn/${item.icon}@2x.png`} alt="" />
-                           
-                            <div className='weatherTemperature'>{item.temperature}</div>
-                        </div> : false
+                        item.date.fullDate == today ?
+                            <div className='weatherItem' key={item.date.time}>
+                                <div className='weatherTime'>{item.date.time}</div>
+                                <img src={`http://openweathermap.org/img/wn/${item.icon}@2x.png`} alt="" />
+                                <div className='weatherTemperature'>{item.temperature}</div>
+                            </div> : false
                     )}
                 </div>
-
             </div>
             <div className='content-title'>
-            <span className={s.black}>У вас </span><span className={s.pink}>{taskCount} задач </span><span className={s.black}>на этот день</span>
+                <span className={s.black}>У вас </span><span className={s.pink}>{taskCount} задач </span><span className={s.black}>на этот день</span>
             </div>
             <div className='add-task-wrapper'>
-            <button className='addTask' onClick={() => { addTaskActive(true) }}>Добавить задачу</button>
+                {!isAddTaskActive ? <button className='addTask' onClick={() => { addTaskActive(true) }}>Добавить задачу</button> : ' '}
             </div>
-            {addTask ? <TaskForm
+            {isAddTaskActive ? <TaskForm
                 addTaskActive={addTaskActive}
                 events={tasks}
             /> : false}
-
         </div>
     )
 

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/FirebaseAuth';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-import { useDispatch, useSelector } from 'react-redux';
-import { logIn, logOut, setUserID } from './redux/reducers/rootReducer'
+import { useDispatch } from 'react-redux';
+import { logIn, setUserID } from './redux/reducers/rootReducer'
 import { setCurrentDay } from './redux/reducers/rootReducer';
 import uiConfig from './firebase/config';
 import { getEventsDates } from './firebase';

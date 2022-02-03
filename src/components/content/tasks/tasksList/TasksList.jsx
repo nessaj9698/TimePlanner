@@ -9,7 +9,6 @@ import svg from  '../../../../assets/img/4-04.svg';
 
 
 const TasksList = () => {
-
     const plannedEvents = useSelector(state => state.rootReducer.plannedEvents)
     const completedEvents = useSelector(state => state.rootReducer.completedEvents)
   

@@ -5,7 +5,6 @@ import buildCalendar from "./build";
 import CalendarHeader from "./header";
 import { useDispatch, useSelector } from 'react-redux';
 import { setCurrentDay } from '../../redux/reducers/rootReducer';
-
 import { fetching } from "../../firebase";
 
 export default function MyCalendar() {
@@ -18,13 +17,11 @@ export default function MyCalendar() {
     const completedDates = useSelector(state => state.rootReducer.allCompletedDates)
 
     useEffect(() => {
-
         setCalendar(buildCalendar(value))
     }, [value])
 
     useEffect(() => {
         fetching(user)
-        
     }, [user])
 
 
@@ -32,27 +29,22 @@ export default function MyCalendar() {
         <div className={s.calendar}>
             <CalendarHeader value={value} setValue={setValue} />
             <div className={s.dayNames}>
-                {['Пн', "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"].map((item) => <div>{item}</div>)}
+                {['Пн', "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"].map((item) => <div key={item}>{item}</div>)}
             </div>
             <div className={s.body}>{calendar.map((week) =>
-                <div className={s.calendarRow}>
+                <div className={s.calendarRow} key={week}>
                     {week.map((day) =>
-                        
-                            <div className={plannedDates.includes(day.format('DD-MM-YYYY')) === true ? `${s.planned}` : completedDates.includes(day.format('DD-MM-YYYY')) === true ? `${s.completed}` : `day`}
-                                onClick={() => {
-                                    setValue(day);
-                                    dispatch(setCurrentDay(day.format('DD-MM-YYYY')))
-                                }}><div className={value.isSame(day, 'day') ? s.selected : ''}>
-                                    {day.format('D')}
-                                </div>
-
+                        <div className={plannedDates.includes(day.format('DD-MM-YYYY')) === true ? `${s.planned}` : completedDates.includes(day.format('DD-MM-YYYY')) === true ? `${s.completed}` : `day`}
+                            onClick={() => {
+                                setValue(day);
+                                dispatch(setCurrentDay(day.format('DD-MM-YYYY')))
+                            }} key={day}><div className={value.isSame(day, 'day') ? s.selected : ''}>
+                                {day.format('D')}
                             </div>
-                        )}
+                        </div>
+                    )}
                 </div>
             )}</div>
-
-
-
         </div>
     )
 }

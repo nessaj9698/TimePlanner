@@ -1,8 +1,7 @@
-import React, { useRef } from "react";
-import { useState, useEffect } from 'react'
+import React from "react";
 import { useSelector } from 'react-redux'
 import style from '.././tasks.module.css'
-import newTask, { getEventsDates } from '../../../../firebase'
+import newTask from '../../../../firebase'
 import { useDispatch } from 'react-redux'
 import ImportanceRadio from '.././tasksList/importance-radio'
 import { setEventImportance } from '../../../../redux/reducers/rootReducer'
@@ -37,7 +36,6 @@ const TaskForm = (props) => {
     const currentDay = useSelector(state => state.rootReducer.currentDay)
     let events = useSelector(state => state.rootReducer.plannedEvents)
     const dispatch = useDispatch()
-
     const duplicateValidation = (text) => {
         for (let prop in events) {
             if (events[prop].task == text) {
@@ -46,12 +44,10 @@ const TaskForm = (props) => {
                 return true
             }
         }
-       
     }
 
     return (
         <div>
-
             <form action="" onSubmit={handleSubmit(onSubmit)}>
                 <input type="text" className={style.taskInput}
                     {...register('task', {
@@ -66,7 +62,7 @@ const TaskForm = (props) => {
                         },
                         validate: {
                             duplicate: duplicateValidation,
-                         
+
                         }
                     })}
                 />
