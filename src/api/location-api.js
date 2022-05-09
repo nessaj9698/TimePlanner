@@ -1,8 +1,7 @@
 import axios from "axios";
-import { useDispatch } from "react-redux";
 import { fetchForecast } from "../redux/reducers/rootReducer";
-import { createAsyncThunk } from "@reduxjs/toolkit";
 
+// Прогноз погоды в городе пользователя
 
 const getForecast = (dispatch) => {
     axios.get("https://ipapi.co/json/").then((response) => {

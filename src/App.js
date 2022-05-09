@@ -2,12 +2,9 @@ import './App.css';
 import React from 'react'
 import Container from './components/Container';
 import store from './redux/store';
-import axios from 'axios';
 
 
 function App() {
-
-  
 
   return (
     <div className="App">

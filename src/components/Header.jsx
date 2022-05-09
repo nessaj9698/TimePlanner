@@ -8,20 +8,19 @@ import { logOut } from '../redux/reducers/rootReducer';
 
 const Header = () => {
     const dispatch = useDispatch()
-    
     const userName = useSelector(state => state.rootReducer.userName)
-    
+
     const signOut = () => {
         firebase.auth().signOut()
         dispatch(logOut())
     }
+
     if (userName) {
         return (
             <div className="header">
                 <img src={logo} alt="" />
-        
                 <div>{userName}
-                <button onClick={signOut} className='logout-button'>Выход</button>
+                    <button onClick={signOut} className='logout-button'>Выход</button>
                 </div>
             </div>
         )
@@ -31,7 +30,6 @@ const Header = () => {
             <div className="header">
                 <img src={logo} alt="" />
                 <div>{userName}</div>
-
             </div>
         )
     }

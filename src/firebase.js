@@ -1,15 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getDatabase, get, ref, push, remove, child, endAt, query } from "firebase/database";
+import { getDatabase, get, ref, push, remove} from "firebase/database";
 import firebase from 'firebase/compat/app';
 import 'firebaseui/dist/firebaseui.css'
-import { fetchPlannedEvents, addEvent, fetchCompletedEvents,fetchAllPlannedDates,fetchAllCompletedDates } from "./redux/reducers/rootReducer";
+import { fetchPlannedEvents, fetchCompletedEvents,fetchAllPlannedDates,fetchAllCompletedDates } from "./redux/reducers/rootReducer";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-
-
-
-
-
 
 
 
@@ -28,11 +23,9 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase();
 
 const tasksRef = (user, date, status) => ref(database, `users/${user}/${status}/${date}`)
-
 export const fetching  = createAsyncThunk(
   'events/fetch',
   async function(user,{dispatch}) {
-   
   })
 
 const newTask = (user, date, status, dispatch, text, importance) => {
@@ -74,8 +67,6 @@ export const fetch = (user, date, status, dispatch) => {
 
 
 export const getEventsDates = (user,dispatch) => {
-  
-  
   get(ref(database, `users/${user}/planned`)).then((data) => {
     let plannedDates = []
     for (let prop in data.val()) {
@@ -90,8 +81,6 @@ export const getEventsDates = (user,dispatch) => {
     }
     dispatch(fetchAllCompletedDates(completedDates));
   })
-  
-
 }
 
 export const completeTask = (user, date, taskID, taskText,importance, dispatch) => {

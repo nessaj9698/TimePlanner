@@ -1,5 +1,4 @@
 import React from 'react'
-
 import TasksHeader from './tasks/TasksHeader';
 import TasksList from './tasks/tasksList/TasksList';
 import SignInScreen from '../../auth';

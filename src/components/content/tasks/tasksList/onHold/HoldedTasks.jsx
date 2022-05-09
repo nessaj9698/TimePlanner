@@ -7,32 +7,25 @@ import { deleteTask } from '../../../../../firebase';
 
 
 const HoldedTasks = () => {
+    let tasksRes = []
     const dispatch = useDispatch()
-   
+    const tasks = useSelector(state => state.rootReducer.plannedEvents)
     const currentUser = useSelector(state => state.rootReducer.userID)
     const currentDay = useSelector(state => state.rootReducer.currentDay)
     const importance = useSelector(state => state.rootReducer.eventImportance)
-
     useEffect(() => {
         fetch(currentUser,currentDay,'planned',dispatch)
-     
     }, [currentUser,currentDay])
     
-    const tasks = useSelector(state => state.rootReducer.plannedEvents)
-    
-    let tasksRes = []
     for (let task in tasks) {
-        
         tasksRes.push({taskID:task,taskText:tasks[task].task,taskImportance:tasks[task].importance})
-        
     }
     
- 
     return (
         <div className='holdedTasksList'>
            {  tasksRes.map(item => 
            
-        <div className="task">
+        <div className="task" key={item.taskID}>
             <span className='taskText'>{item.taskText}</span>
             <span className='importance'>{item.taskImportance}</span>
             <div className="task-controls">
