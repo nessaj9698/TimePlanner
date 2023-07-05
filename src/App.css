@@ -94,6 +94,7 @@ border:none;
   background-color:#efefef;
   border-radius:50px;
   padding: 5px 10px;
+  cursor:pointer;
 }
 .completeTrigger {
   margin-right: 10px;

@@ -69,3 +69,7 @@ width:100%;
     display: flex;
     justify-content: space-between;
 }
+.next,
+.previous {
+    cursor:pointer;
+}

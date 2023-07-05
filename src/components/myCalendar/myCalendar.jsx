@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
+import 'moment/locale/ru'
 import s from './styles.module.css'
 import buildCalendar from "./build";
 import CalendarHeader from "./header";

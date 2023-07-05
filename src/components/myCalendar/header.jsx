@@ -20,7 +20,7 @@ export default function CalendarHeader({value,setValue}) {
                 <div className={s.previous}
                 onClick={() => setValue(prevMonth())}
                 >{String.fromCharCode(171)}</div>
-                <div className={s.current}>{currMonthName()}{currYear()}</div>
+                <div className={s.current}>{currMonthName()} {currYear()}</div>
                 <div className={s.next}
                 onClick={() => setValue(nextMonth())}
                 >{String.fromCharCode(187)}</div>
