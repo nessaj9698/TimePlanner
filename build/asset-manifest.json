@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/TimePlanner/static/css/main.83b47cff.chunk.css",
+    "main.js": "/TimePlanner/static/js/main.55e0e4c7.chunk.js",
+    "main.js.map": "/TimePlanner/static/js/main.55e0e4c7.chunk.js.map",
+    "runtime-main.js": "/TimePlanner/static/js/runtime-main.2c5b557a.js",
+    "runtime-main.js.map": "/TimePlanner/static/js/runtime-main.2c5b557a.js.map",
+    "static/css/2.989ce313.chunk.css": "/TimePlanner/static/css/2.989ce313.chunk.css",
+    "static/js/2.c5ba4fba.chunk.js": "/TimePlanner/static/js/2.c5ba4fba.chunk.js",
+    "static/js/2.c5ba4fba.chunk.js.map": "/TimePlanner/static/js/2.c5ba4fba.chunk.js.map",
+    "static/js/3.4235dc93.chunk.js": "/TimePlanner/static/js/3.4235dc93.chunk.js",
+    "static/js/3.4235dc93.chunk.js.map": "/TimePlanner/static/js/3.4235dc93.chunk.js.map",
+    "index.html": "/TimePlanner/index.html",
+    "precache-manifest.1cbebf8e31fe1399c884e323eb247bd7.js": "/TimePlanner/precache-manifest.1cbebf8e31fe1399c884e323eb247bd7.js",
+    "service-worker.js": "/TimePlanner/service-worker.js",
+    "static/css/2.989ce313.chunk.css.map": "/TimePlanner/static/css/2.989ce313.chunk.css.map",
+    "static/css/main.83b47cff.chunk.css.map": "/TimePlanner/static/css/main.83b47cff.chunk.css.map",
+    "static/js/2.c5ba4fba.chunk.js.LICENSE.txt": "/TimePlanner/static/js/2.c5ba4fba.chunk.js.LICENSE.txt",
+    "static/media/4-04.svg": "/TimePlanner/static/media/4-04.dff83f42.svg",
+    "static/media/logo.svg": "/TimePlanner/static/media/logo.43889160.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2c5b557a.js",
+    "static/css/2.989ce313.chunk.css",
+    "static/js/2.c5ba4fba.chunk.js",
+    "static/css/main.83b47cff.chunk.css",
+    "static/js/main.55e0e4c7.chunk.js"
+  ]
+}
