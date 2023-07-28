@@ -21,6 +21,7 @@
 
 .App {
   width:1375px;
+  max-width:90%;
   margin:20px auto;
   display: flex;
   flex-wrap:wrap;
@@ -59,6 +60,7 @@ background-color: #884CB2;
 border-radius:10px;
 margin-top:10px;
 border:none;
+cursor:pointer;
 }
 .holdedTasksList {
   margin-bottom: 30px;
@@ -214,5 +216,11 @@ cursor: pointer;
   }
   .css-ahj2mt-MuiTypography-root {
     font-size:.9rem !important;
+  }
+}
+
+@media (min-device-width:768px) and (max-device-width:1400px) {
+  .App {
+    padding:0 25px;
   }
 }

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import store from '../../../redux/store'
 import TaskForm from './taskForm/taskForm'
 import getForecast from '../../../api/location-api'
+import num_word from '../../../helpers/numerals-declensions'
 
 const TasksHeader = () => {
     const dispatch = useDispatch()
@@ -44,7 +45,7 @@ const TasksHeader = () => {
                 </div>
             </div>
             <div className='content-title'>
-                <span className={s.black}>У вас </span><span className={s.pink}>{taskCount} задач </span><span className={s.black}>на этот день</span>
+                <span className={s.black}>У вас </span><span className={s.pink}>{taskCount} {num_word(taskCount, ["задача", "задачи", "задач"])} </span><span className={s.black}>на этот день</span>
             </div>
             <div className='add-task-wrapper'>
                 {!isAddTaskActive ? <button className='addTask' onClick={() => { addTaskActive(true) }}>Добавить задачу</button> : ' '}
