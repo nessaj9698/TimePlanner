@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "068f8b76373f2427a0506329cda89f59",
+    "revision": "e1c41536b6c988bb697602aec4f7faeb",
     "url": "/TimePlanner/index.html"
   },
   {
-    "revision": "770885666989a5874b7b",
+    "revision": "df38f7db8c499cc264cf",
     "url": "/TimePlanner/static/css/2.989ce313.chunk.css"
   },
   {
-    "revision": "5aaa6ea346d4f8ef1a2e",
-    "url": "/TimePlanner/static/css/main.83b47cff.chunk.css"
+    "revision": "874fa994c853bab82361",
+    "url": "/TimePlanner/static/css/main.73948af7.chunk.css"
   },
   {
-    "revision": "770885666989a5874b7b",
-    "url": "/TimePlanner/static/js/2.c5ba4fba.chunk.js"
+    "revision": "df38f7db8c499cc264cf",
+    "url": "/TimePlanner/static/js/2.a9574bd2.chunk.js"
   },
   {
     "revision": "4dcddd89528135405f4faeeb0779c432",
-    "url": "/TimePlanner/static/js/2.c5ba4fba.chunk.js.LICENSE.txt"
+    "url": "/TimePlanner/static/js/2.a9574bd2.chunk.js.LICENSE.txt"
   },
   {
     "revision": "72f1a7584aed2098fb4b",
     "url": "/TimePlanner/static/js/3.4235dc93.chunk.js"
   },
   {
-    "revision": "5aaa6ea346d4f8ef1a2e",
-    "url": "/TimePlanner/static/js/main.55e0e4c7.chunk.js"
+    "revision": "874fa994c853bab82361",
+    "url": "/TimePlanner/static/js/main.5c42323d.chunk.js"
   },
   {
     "revision": "bd20c3eb1da5ee9504a8",
